@@ -5,14 +5,14 @@ const PORT = process.env.PORT || 3000;
 // Global Middleware for JSON payload parsing
 app.use(express.json());
 
-// Custom Log-Catcher Middleware
+// Custom Log Catcher Middleware
 app.use((req, res, next) => {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${req.method} ${req.originalUrl}`);
     next();
 });
 
-// In-Memory Data Collection (Local Array)
+//Data Collection
 let resources = [
     { id: 1, name: "Test Task", status: "Pending" },
     { id: 2, name: "Code Structure Review", status: "Completed" }
@@ -54,7 +54,6 @@ app.put('/api/resources/:id', (req, res) => {
         return res.status(404).json({ error: "Resource not found for update." });
     }
     
-    // Safely overwrite by spreading existing item and then new body properties
     resources[index] = { ...resources[index], ...req.body, id };
     res.status(200).json(resources[index]);
 });
