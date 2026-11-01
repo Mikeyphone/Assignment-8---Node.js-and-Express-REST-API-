@@ -14,8 +14,8 @@ app.use((req, res, next) => {
 
 // In-Memory Data Collection (Local Array)
 let resources = [
-    { id: 1, name: "Sample Task", status: "Pending" },
-    { id: 2, name: "Design Review", status: "Completed" }
+    { id: 1, name: "Test Task", status: "Pending" },
+    { id: 2, name: "Code Structure Review", status: "Completed" }
 ];
 let currentId = 3;
 

@@ -8,16 +8,16 @@
 },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mikeyphone/Assignment-8---Node.js-and-Express-REST-API-.git"
+    "url": "git+https://github.com/Mikeyphone/Assignment8NodeAndExpressREST-API.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Mikeyphone/Assignment-8---Node.js-and-Express-REST-API-/issues"
+    "url": "https://github.com/Mikeyphone/Assignment8NodeAndExpressREST-API/issues"
   },
-  "homepage": "https://github.com/Mikeyphone/Assignment-8---Node.js-and-Express-REST-API-#readme",
+  "homepage": "https://github.com/Mikeyphone/Assignment8NodeAndExpressREST-API#readme",
   "dependencies": {
     "express": "^5.3.0"
   }
