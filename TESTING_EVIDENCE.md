@@ -3,11 +3,11 @@
 **Testing Client:** Postman
 **Base URL:** `http://localhost:3000`
 
-### 1. GET /api/resources
+### 1. GET /api/resources (Initial State)
 * **Method:** GET
 * **Endpoint:** `/api/resources`
 * **Status Return:** 200 OK
-* **Expected Result:** Returned the in-memory JSON array of tracked elements, verifying the final state of the dataset containing `id: 1` and `id: 3`.
+* **Expected Result:** Returned the initial in-memory JSON array of tracked elements, verifying the dataset containing `id: 1` ("Test Task") and `id: 2` ("Code Structure Review").
 
 ### 2. GET /api/resources/:id
 * **Method:** GET
@@ -34,3 +34,9 @@
 * **Endpoint:** `/api/resources/2`
 * **Status Return:** 200 OK
 * **Expected Result:** Successfully spliced the target item out of the tracking array and returned the confirmation message `"Resource 2 successfully deleted."`.
+
+### 6. GET /api/resources (Checking Changes)
+* **Method:** GET
+* **Endpoint:** `/api/resources`
+* **Status Return:** 200 OK
+* **Expected Result:** Returned the modified in-memory JSON array, confirming that `id: 1` was updated, `id: 2` was deleted, and `id: 3` was added.
